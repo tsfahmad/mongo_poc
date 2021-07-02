@@ -1,0 +1,22 @@
+{
+  "name": "mongo_poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsfahmad/mongo_poc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsfahmad/mongo_poc/issues"
+  },
+  "homepage": "https://github.com/tsfahmad/mongo_poc#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
