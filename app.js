@@ -4,7 +4,7 @@ require('dotenv').config()
 
 
 
-const { createProduct } = require('./mongo');
+const { createProduct, getProducts } = require('./mongo');
 
 const app = express();
 
@@ -13,6 +13,6 @@ app.use(bodyParser.json());
 
 app.post('/products', createProduct);
 
-app.get('/products');
+app.get('/products', getProducts);
 
 app.listen(3000);

@@ -30,7 +30,26 @@ const createProduct = async (req, res, next) => {
 };
 
 const getProducts = async (req, res, next) => {
+    const client = MongoClient(
+        process.env.MONGO_URL,
+        {useNewUrlParser: true, useUnifiedTopology: true}
+    );
 
+    let products = [];
+
+    try {
+        await client.connect();
+        const db = client.db();
+        products = await db.collection('products').find().toArray();
+    } catch (error) {
+        console.log(error);
+        return res.json({message: 'Could not retreive product.'});
+    }
+    finally {
+        client.close();
+    }
+
+    res.json(products);
 };
 
 
