@@ -4,7 +4,8 @@ require('dotenv').config()
 
 
 
-const { createProduct, getProducts } = require('./mongo');
+const { getProducts } = require('./mongo');
+const { createProduct } = require('./mongoose');
 
 const app = express();
 
