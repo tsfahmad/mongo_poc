@@ -3,9 +3,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config()
 
 
-
-const { getProducts } = require('./mongo');
-const { createProduct } = require('./mongoose');
+const { createProduct, getProducts } = require('./mongoose');
 
 const app = express();
 
